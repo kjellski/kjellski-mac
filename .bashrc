@@ -108,6 +108,7 @@ alias gip='git push'
 alias gil='git log'
 alias gimm='git checkout master && git merge dev && git checkout dev'
 alias tg='tree $1 | ack --passthru --color '
+alias st='open -a SourceTree'
 # maven pax aliases
 alias m2cip='mvn clean install pax:provision -DskipTests'
 alias m2cipt='mvn clean install pax:provision '
