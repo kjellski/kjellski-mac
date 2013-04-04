@@ -113,6 +113,8 @@ alias st='open -a SourceTree'
 alias m2cip='mvn clean install pax:provision -DskipTests'
 alias m2cipt='mvn clean install pax:provision '
 
+alias httpserver='python -m SimpleHTTPServer'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
