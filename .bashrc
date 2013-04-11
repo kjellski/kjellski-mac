@@ -115,6 +115,11 @@ alias m2cipt='mvn clean install pax:provision '
 
 alias httpserver='python -m SimpleHTTPServer'
 
+# This makes the todo command add a todo with an empty commit to a git repository
+todo() {
+  git commit --allow-empty -m "TODO: $*"
+}
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
