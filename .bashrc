@@ -73,7 +73,7 @@ todo() {
   git commit --allow-empty -m "TODO: $*"
 }
 
-source .bash_aliases
+source $HOME/.bash_aliases
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -81,13 +81,10 @@ source .bash_aliases
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
-    source .rails_bash_completion
+    source $HOME/.rails_bash_completion
 fi
 
 export PATH=$HOME/bin:$HOME/src:/usr/local/sbin:.:$PATH
-export CLASSPATH=/usr/bin/java:$HOME/lib:$HOME/src/:$HOME/.lein/self-installs/leiningen-1.6.2-standalone.jar:.:$CLASSPATH
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
-export LD_LIBRARY_PATH=/usr/lib/jvm/java-6-openjdk:$CLASSPATH
 
 # exports all commands from ~/bin and subfolders to PATH
 if [ -s "$HOME/bin" ]; then
@@ -101,3 +98,13 @@ if [ -s "$HOME/.rvm" ]; then
     [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
     #PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 fi
+
+# Setting for the new UTF-8 terminal support in Lion
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# Programming exports
+export CLASSPATH=/usr/bin/java:$HOME/lib:$HOME/src/:$HOME/.lein/self-installs/leiningen-1.6.2-standalone.jar:.:$CLASSPATH
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/
+export LD_LIBRARY_PATH=/usr/lib/jvm/java-6-openjdk:$CLASSPATH
+export GOPATH=/Users/kjellski/Projects/go/GOPATH
